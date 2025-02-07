@@ -1,0 +1,24 @@
+name: evolution-api-service
+description: Servicio para enviar mensajes, imágenes y archivos a WhatsApp usando Evolution API
+
+services:
+    - name: evolution-api
+      port: 3000
+      routes:
+          - name: evolution-route
+            protocol: http
+            port: 3000
+
+      env:
+          - name: API_TOKEN
+            value: tu_api_token
+          - name: INSTANCE_NAME
+            value: tu_nombre_instancia
+          - name: CLIENT_TOKEN
+            value: tu_token_cliente
+          - name: PHONE_NUMBER
+            value: '+1234567890'
+
+      git:
+          url: https://github.com/tu_usuario/tu_repositorio.git
+          branch: main
